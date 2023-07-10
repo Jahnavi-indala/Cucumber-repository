@@ -14,6 +14,6 @@ public class Constants {
 	public final static String emailId="on_silver@wk.com";
 
 	public final static String password="!QAZxsw2";
-
+	public final static String newplaylistname="ABCpalylist";
 
 }
