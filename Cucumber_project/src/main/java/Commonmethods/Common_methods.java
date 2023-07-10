@@ -26,7 +26,7 @@ public class Common_methods {
 	}
 
 
-	public String getTitle() {
+	public static String getTitle() {
 
 		return Driver.getDriver().getTitle();
 
@@ -41,7 +41,7 @@ public class Common_methods {
 			alert.accept();
 
 		else if (option.equals("cancel"))
-
+ 
 			alert.dismiss();
 
 	}
