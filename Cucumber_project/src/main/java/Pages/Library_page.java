@@ -12,6 +12,12 @@ public class Library_page {
 	public static final By closePopup=By.xpath("//a[@ng-click='Close()']");
 	public static final By popupTextbox=By.xpath("//input[@placeholder='Create new playlist']");
 	public static final By popupMsgg=By.xpath("//div[text()='The lecture has been succesfully added.']");
+	public static final By clickSearchBySpecialty=By.xpath("//a[text()='Search By Specialty ']");
+	public static final By selectSpeciatly=By.id("header_0_rpSearchSpecialty_btoSearchLink_14");
+	public static final By selectSortByDP=By.xpath("//select[@id='container_2_ddlSortingBy']");
+	
+	
+	
 	
 	public static WebElement addPlaylist() 
 	{
@@ -48,7 +54,25 @@ public class Library_page {
 		return Driver.getDriver().findElement(popupMsgg);
 
 	}
+	public static WebElement clickSearchSpecialty() 
+	{
+		return Driver.getDriver().findElement(clickSearchBySpecialty);
 
+	}
+	public static WebElement clickSelectSpecialty() 
+	{
+		return Driver.getDriver().findElement(selectSpeciatly);
+
+	}
+	public static WebElement selectSortByDrpdwn() 
+	{
+		return Driver.getDriver().findElement(selectSpeciatly);
+
+	}
+	
+	
+	
+	
 	
 	
 	
@@ -89,6 +113,21 @@ public class Library_page {
 		Thread.sleep(3000);
 
 	}
+	public static void clickOnSearchBySpecialty() throws Exception
+	{
+
+		clickSearchSpecialty().click();
+		Thread.sleep(3000);
+
+	}
+	public static void selectSpecialtyByDropdown() throws Exception
+	{
+
+		clickSelectSpecialty().click();
+		Thread.sleep(3000);
+
+	}
+	
 
 		
 }

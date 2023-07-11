@@ -8,7 +8,7 @@ public class Constants {
 	public final static String DashBoardPageUrl="https://www.audio-digest.org/Dashboard";
 	public final static String PlayListUrl="https://www.audio-digest.org/Playlists";
 	public final static String libraryUrl="https://www.audio-digest.org/Library";
-
+    public final static String coursespanelurl="https://www.audio-digest.org/Search";
 	
 
 	public final static String emailId="on_silver@wk.com";
@@ -19,6 +19,6 @@ public class Constants {
     public final static String selectDisease="Humans papilloma virus";
     public final static String instituteName="American academy of pedatrics callifornia";    
     public final static String playlistTextboxpopup="RFVplaylist";
-    
-    
+    public final static String selectNewTextByDrpdwn="Newest (PublicationDate)";
+    public final static String selectOldTextByDrpdwn="Oldest (PublicationDate)";
 }
