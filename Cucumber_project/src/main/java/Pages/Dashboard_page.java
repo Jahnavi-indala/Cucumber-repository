@@ -9,7 +9,7 @@ public class Dashboard_page {
 
 	public static final By PlaylistsTab=By.xpath("//span[text()='Playlists']");
 	public static final By dashboardTab=By.xpath("//span[text()='Dashboard']");
-	
+	public static final By LibraryTab=By.xpath("//span[text()='Library']");
 
 
 
@@ -26,7 +26,12 @@ public class Dashboard_page {
 		return Driver.getDriver().findElement(dashboardTab);
 
 	}
+	public static WebElement LibraryTab() 
+	{
 
+		return Driver.getDriver().findElement(LibraryTab);
+
+	}
 	
 
 
@@ -44,6 +49,12 @@ public class Dashboard_page {
 	public static void  NavigatetoDashboard() throws Exception 
 	{
 		dashboardBtn().click();
+		Thread.sleep(5000);
+
+	}
+	public static void  navigatetoLibrary() throws Exception 
+	{
+		LibraryTab().click();
 		Thread.sleep(5000);
 
 	}

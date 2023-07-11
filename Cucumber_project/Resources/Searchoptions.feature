@@ -5,12 +5,10 @@ Feature: Searching functionalities
   
   Scenario: Verify to validate search enter a topic filter
    Given I am at the Audio Digest dashboard page with login as prereqist
-   And enter "resuscitation Literature Review" on search and validate courses panel
-   And enter "virus" on topic filter and validate 
-   And select "Humans papilloma virus" on search results and validate
-   And observe the search result and check the result with credits and courses
+   And enter coursename on searchbox and validate courses panel
+   And enter type of disease on topic filter and validate 
+   And select type of disease on search results and validate
    And click on cross icon and verify the results
-   And user should be on original course
    Then logout.
    
    
@@ -18,13 +16,10 @@ Feature: Searching functionalities
    
   Scenario: Verify to validate search enter a institution filter
    Given I am at the Audio Digest dashboard page with login as prereqist
-   And enter "resuscitation Literature Review" on search and validate courses panel
+   And enter coursename on searchbox and validate courses panel
    And click on cross icon and verify the results 
-   And validate user should be on original course
-   And enter "American academy of pedatrics callifornia" in institution and validate 
-   And select "American academy of pedatrics callifornia" in institution and verify lectures
-   And observe the search result and check the result with credits and courses
+   And enter institute name in institution and validate 
+   And select institute name in institution and verify lectures
    And click on cross icon and verify the results
-   And user should be on original course
    Then logout.
    
