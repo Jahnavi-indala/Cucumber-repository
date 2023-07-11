@@ -9,9 +9,9 @@ public class Library_page {
 	public static final By playlistPopupTitle=By.xpath("//span[text()='This course is in your Library ']");
     public static final By createPlaylistTxtbox=By.xpath("//input[@placeholder='Create new playlist']");
 	public static final By clickOnSaveBtn=By.xpath("//input[@id='submitbutmodal']");
-	
-	
-	
+	public static final By closePopup=By.xpath("//a[@ng-click='Close()']");
+	public static final By popupTextbox=By.xpath("//input[@placeholder='Create new playlist']");
+	public static final By popupMsgg=By.xpath("//div[text()='The lecture has been succesfully added.']");
 	
 	public static WebElement addPlaylist() 
 	{
@@ -33,7 +33,22 @@ public class Library_page {
 		return Driver.getDriver().findElement(clickOnSaveBtn);
 
 	}
-	
+	public static WebElement clickOnClosePopup() 
+	{
+		return Driver.getDriver().findElement(closePopup);
+
+	}
+	public static WebElement popupTextBox() 
+	{
+		return Driver.getDriver().findElement(popupTextbox);
+
+	}
+	public static WebElement popupMessage() 
+	{
+		return Driver.getDriver().findElement(popupMsgg);
+
+	}
+
 	
 	
 	
@@ -60,5 +75,20 @@ public class Library_page {
 		Thread.sleep(3000);
 
 	}
+	public static void clickPopupCloseBtn() throws Exception
+	{
+
+		clickOnClosePopup().click();
+		Thread.sleep(3000);
+
+	}
+	public static void enterPopupTextBox() throws Exception
+	{
+
+		popupTextBox().sendKeys(Constants.playlistTextboxpopup);
+		Thread.sleep(3000);
+
+	}
+
 		
 }
