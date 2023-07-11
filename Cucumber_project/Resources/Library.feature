@@ -8,8 +8,7 @@ Feature: Library functionality
       Given I am at the Audio Digest dashboard page with login as prereqist 
       And I click on library tab on dashboard page
       And I validate Audio Digest library page
-      And I click on add to playlist link on any playlist 
-      And validate displayed popup
+      And I click on add to playlist link and validate displayed popup 
       And click on save button and observe the popup message
       Then logout.
      

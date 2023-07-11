@@ -18,7 +18,7 @@ public class Constants {
     public final static String typeOfDisease="virus";
     public final static String selectDisease="Humans papilloma virus";
     public final static String instituteName="American academy of pedatrics callifornia";    
-    
+    public final static String playlistTextboxpopup="RFVplaylist";
     
     
 }
