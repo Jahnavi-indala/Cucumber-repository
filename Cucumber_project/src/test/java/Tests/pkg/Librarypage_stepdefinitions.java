@@ -52,6 +52,29 @@ public class Librarypage_stepdefinitions {
 		Validations.IsDsiplayed(Library_page.popupMessage(), "popup message is not displayed");
 	}
 
+	@Given("I click on search by specialty and select specialty")
+	public void i_click_on_search_by_specialty_and_select_specialty() throws Exception {
+	   Library_page.clickOnSearchBySpecialty();
+	   Thread.sleep(3000);
+	   Library_page.selectSpecialtyByDropdown();
+	}
+
+	@Given("I click on sortby dropdown and select newest option and observe results")
+	public void i_click_on_sortby_dropdown_and_select_newest_option_and_observe_results() throws InterruptedException 
+	{
+		Common_methods.selectDropDown(Library_page.selectSortByDrpdwn(), Constants.selectNewTextByDrpdwn);
+		Thread.sleep(5000);
+	}
+
+	@Given("I click on sortby dropdown and select oldest option and observe results")
+	public void i_click_on_sortby_dropdown_and_select_oldest_option_and_observe_results() throws InterruptedException 
+	{
+		Common_methods.selectDropDown(Library_page.selectSortByDrpdwn(), Constants.selectOldTextByDrpdwn);
+		Thread.sleep(5000);
+
+	}
+
+
 
 
 }

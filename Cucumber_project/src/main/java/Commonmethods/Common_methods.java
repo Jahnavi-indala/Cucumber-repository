@@ -3,6 +3,7 @@ package Commonmethods;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 import Pages.Driver;
 
@@ -60,6 +61,15 @@ public class Common_methods {
 
 	}
 
+	public static void selectDropDown(WebElement element,String selecttext)
+	{
+		
+		Select s=new Select(element);
+		s.selectByVisibleText(selecttext);
+		
+	}
+	
+	
 }
 
 
