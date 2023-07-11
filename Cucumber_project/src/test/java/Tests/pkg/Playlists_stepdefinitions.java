@@ -46,11 +46,8 @@ public class Playlists_stepdefinitions {
 
 	@Given("I validate Audio Digest create playlist popup")
 	public void i_validate_audio_digest_create_playlist_popup() throws Exception {
-		String c=Playlists_page.playlistTitle().getText();
-		System.out.println(c+"playlist");
-		String d=Common_methods.getTitle();
-		System.out.println(d+"common");
-		Validations.IsTrue("Create Playlist",Playlists_page.playlistTitle().getText(), "playlist popup is not displayed");
+		
+		Validations.IsDsiplayed(Playlists_page.playlistTitle(), "create playlist popup is not displayed");
 	}
 
 	@Given("enter new playlist name and click on create button")
@@ -65,6 +62,7 @@ public class Playlists_stepdefinitions {
 	@Given("I click on any playlist")
 	public void i_click_on_any_playlist() throws Exception {
 		Playlists_page.clickingAnyPlaylist();
+		Thread.sleep(5000);
 	}
 
 	@Then("observe the status of that playlist and logout.")
@@ -74,6 +72,28 @@ public class Playlists_stepdefinitions {
 	    Thread.sleep(3000);
 		Logout.LogoutBtn();
 	}
+
+	@Given("I click on Myplaylist group section and validate")
+	public void i_click_on_myplaylist_group_section_and_validate() throws Exception 
+	{
+		Playlists_page.expandMyPlaylist();
+		Thread.sleep(5000);
+	}
+
+	@Given("I click on AudioDigest playlist group section and validate")
+	public void i_click_on_audio_digest_playlist_group_section_and_validate() throws Exception 
+	{
+		Playlists_page.expandAudioDigestPlaylist();
+		Thread.sleep(5000);
+
+	}
+
+
+
+	
+	
+
+
 
 
 

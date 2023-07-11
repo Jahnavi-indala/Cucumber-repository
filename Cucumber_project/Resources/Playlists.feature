@@ -25,7 +25,23 @@ Feature: Playlists functionality
     
     
     
+  Scenario: Verify validate my playlists group section
   
+     Given I am at the Audio Digest dashboard page with login as prereqist
+     And I click on playlists tab on dashboard page
+     And I validate Audio Digest playlists page 
+     And I click on Myplaylist group section and validate
+     Then logout.
+     
+     
+     
+  Scenario: Verify validate audio digest created playlists section
+  
+     Given I am at the Audio Digest dashboard page with login as prereqist
+     And I click on playlists tab on dashboard page
+     And I validate Audio Digest playlists page 
+     And I click on AudioDigest playlist group section and validate
+     Then logout.
      
      
      

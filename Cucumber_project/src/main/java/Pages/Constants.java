@@ -12,8 +12,13 @@ public class Constants {
 	
 
 	public final static String emailId="on_silver@wk.com";
-
 	public final static String password="!QAZxsw2";
-	public final static String newplaylistname="ABCpalylist";
-
+	public final static String newplaylistname="PQRpalylist";
+    public final static String coursename="resuscitation Literature Review";
+    public final static String typeOfDisease="virus";
+    public final static String selectDisease="Humans papilloma virus";
+    public final static String instituteName="American academy of pedatrics callifornia";    
+    
+    
+    
 }
