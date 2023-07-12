@@ -1,11 +1,13 @@
 package Commonmethods;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import Pages.Driver;
+import Pages.Library_page;
 
 
 public class Common_methods {
@@ -47,7 +49,8 @@ public class Common_methods {
 
 	}
 
-	public static String CurrentUrl() {
+	public static String CurrentUrl() 
+	{
 		
 		System.out.println(Driver.getDriver().getCurrentUrl());
 
@@ -69,6 +72,21 @@ public class Common_methods {
 		
 	}
 	
+	 public static String clickSearchMenuAndTypeOption(String Xpath,String option)
+	 {
+		 
+		 return String.format(Xpath,option);
+	 }
+	 public static void selectSpecialtyByDropdown() throws Exception
+		{
+
+			
+			Thread.sleep(3000);
+			System.out.println(Common_methods.clickSearchMenuAndTypeOption(Library_page.selectspecality,"Orthopaedics"));
+			WebElement s=Driver.getDriver().findElement(By.xpath(Common_methods.clickSearchMenuAndTypeOption(Library_page.selectspecality,"Orthopaedics")));
+	        s.click();
+			
+		}
 	
 }
 

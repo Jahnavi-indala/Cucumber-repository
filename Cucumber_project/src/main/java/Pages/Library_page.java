@@ -3,6 +3,8 @@ package Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import Commonmethods.Common_methods;
+
 public class Library_page {
 
 	public static final By addtoPlaylistBy=By.xpath("//a[contains(@id,'container_2_rgLibrary_ctl00_ctl04_AddToPlaylistButton')]");
@@ -15,7 +17,7 @@ public class Library_page {
 	public static final By clickSearchBySpecialty=By.xpath("//a[text()='Search By Specialty ']");
 	public static final By selectSpeciatly=By.id("header_0_rpSearchSpecialty_btoSearchLink_14");
 	public static final By selectSortByDP=By.xpath("//select[@id='container_2_ddlSortingBy']");
-	
+	public static final String selectspecality="//a[text()='Search By Specialty '] /parent::div//div/a[text()='%s']";
 	
 	
 	
@@ -66,7 +68,7 @@ public class Library_page {
 	}
 	public static WebElement selectSortByDrpdwn() 
 	{
-		return Driver.getDriver().findElement(selectSpeciatly);
+		return Driver.getDriver().findElement(selectSortByDP);
 
 	}
 	
@@ -120,13 +122,7 @@ public class Library_page {
 		Thread.sleep(3000);
 
 	}
-	public static void selectSpecialtyByDropdown() throws Exception
-	{
-
-		clickSelectSpecialty().click();
-		Thread.sleep(3000);
-
-	}
+	
 	
 
 		
