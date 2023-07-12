@@ -56,7 +56,9 @@ public class Librarypage_stepdefinitions {
 	public void i_click_on_search_by_specialty_and_select_specialty() throws Exception {
 	   Library_page.clickOnSearchBySpecialty();
 	   Thread.sleep(3000);
-	   Library_page.selectSpecialtyByDropdown();
+	   Common_methods.selectSpecialtyByDropdown();
+	   Thread.sleep(3000);
+
 	}
 
 	@Given("I click on sortby dropdown and select newest option and observe results")
@@ -70,7 +72,7 @@ public class Librarypage_stepdefinitions {
 	public void i_click_on_sortby_dropdown_and_select_oldest_option_and_observe_results() throws InterruptedException 
 	{
 		Common_methods.selectDropDown(Library_page.selectSortByDrpdwn(), Constants.selectOldTextByDrpdwn);
-		Thread.sleep(5000);
+		Thread.sleep(9000);
 
 	}
 
