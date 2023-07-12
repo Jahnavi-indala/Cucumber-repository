@@ -47,6 +47,7 @@ public class SearchOperations_stepdefinitions {
 	public void enter_institute_name_in_institution_and_validate() throws Exception {
 		Searchoptions_page.enterInstitutionNameInTextBox();
 		Thread.sleep(3000);
+		
 	}
 
 	@Given("select institute name in institution and verify lectures")

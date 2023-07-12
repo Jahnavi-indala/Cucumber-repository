@@ -21,4 +21,10 @@ public class Constants {
     public final static String playlistTextboxpopup="RFVplaylist";
     public final static String selectNewTextByDrpdwn="Newest (PublicationDate)";
     public final static String selectOldTextByDrpdwn="Oldest (PublicationDate)";
+    public final static String selectMyInformationText="					My Information\r\n"
+    		+ "";
+    
+    
+    
+    
 }
