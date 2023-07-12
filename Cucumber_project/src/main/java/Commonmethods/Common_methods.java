@@ -12,13 +12,13 @@ import Pages.Library_page;
 
 public class Common_methods {
 
-	
+
 	public void DragAndDrop(WebElement source, WebElement target) {
 
 		Actions action = new Actions(Driver.getDriver());
 
 		action.dragAndDrop(source,target).build().perform();
-   
+
 	}
 
 
@@ -44,14 +44,14 @@ public class Common_methods {
 			alert.accept();
 
 		else if (option.equals("cancel"))
- 
+
 			alert.dismiss();
 
 	}
 
 	public static String CurrentUrl() 
 	{
-		
+
 		System.out.println(Driver.getDriver().getCurrentUrl());
 
 		return Driver.getDriver().getCurrentUrl();
@@ -66,28 +66,28 @@ public class Common_methods {
 
 	public static void selectDropDown(WebElement element,String selecttext)
 	{
-		
+
 		Select s=new Select(element);
 		s.selectByVisibleText(selecttext);
-		
-	}
-	
-	 public static String clickSearchMenuAndTypeOption(String Xpath,String option)
-	 {
-		 
-		 return String.format(Xpath,option);
-	 }
-	 public static void selectSpecialtyByDropdown() throws Exception
-		{
 
-			
-			Thread.sleep(3000);
-			System.out.println(Common_methods.clickSearchMenuAndTypeOption(Library_page.selectspecality,"Orthopaedics"));
-			WebElement s=Driver.getDriver().findElement(By.xpath(Common_methods.clickSearchMenuAndTypeOption(Library_page.selectspecality,"Orthopaedics")));
-	        s.click();
-			
-		}
-	
+	}
+
+	public static String clickSearchMenuAndTypeOption(String Xpath,String option)
+	{
+
+		return String.format(Xpath,option);
+	}
+	public static void selectSpecialtyByDropdown() throws Exception
+	{
+
+
+		Thread.sleep(3000);
+		System.out.println(Common_methods.clickSearchMenuAndTypeOption(Library_page.selectspecality,"Orthopaedics"));
+		WebElement s=Driver.getDriver().findElement(By.xpath(Common_methods.clickSearchMenuAndTypeOption(Library_page.selectspecality,"Orthopaedics")));
+		s.click();
+
+	}
+
 }
 
 
